@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CustomlistView</string>
+
+    <string-array name="student_name">//name of array -> student_name
+        <item>Mickey</item>
+        <item>Minny</item>
+        <item>BadBadtz Maru</item>
+    </string-array>
+</resources>
