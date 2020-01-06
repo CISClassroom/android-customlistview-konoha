@@ -24,8 +24,8 @@ public class StudentAdapter(var mCtx:Context,
         val layout:LayoutInflater = LayoutInflater.from(mCtx)
 
         val v:View = layout.inflate(resource,null)
-        val icon: ImageView = v.findViewById(R.id.textView)
-        val name: TextView = v.findViewById(R.id.imageView)
+        val icon: ImageView = v.findViewById(R.id.imageView)
+        val name: TextView = v.findViewById(R.id.textView)
         val id: TextView = v.findViewById(R.id.textView2)
 
         val student:Student = items[position]
