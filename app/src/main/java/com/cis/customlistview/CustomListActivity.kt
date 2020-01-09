@@ -1,5 +1,6 @@
 package com.cis.customlistview
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ListView
@@ -13,23 +14,35 @@ class CustomListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_custom_list)
 
-<<<<<<< HEAD
-        
-=======
-        var student:Student =
-            Student("Mickey","001",R.mipmap.ic_launcher)
-
         var students = mutableListOf<Student>()
-        students.add(student)
-        students.add(Student("Minnie","002",R.mipmap.ic_launcher))
+        students.add(Student("นายกัมพล โชติทอง", "603410034-5", R.drawable.adun)) //มีแล้วบัค -..-
+        students.add(Student("นายณัฐนนท์ ทาไธสง", "603410041-8", R.drawable.james))
+        students.add(Student("นางสาวศศิกร กอเสนาะรส", "603410063-8", R.drawable.dream))
+        students.add(Student("นางสาวธัญสิริ ผลไสว", "603410291-5", R.drawable.maprang))
 
-        var listview:ListView = findViewById(R.id.customlistview)
-        listview.adapter = StudentAdapter(this,
-            R.layout.listitem_student,students)
+        var listview: ListView = findViewById(R.id.customlistview)
+        listview.adapter = StudentAdapter(
+            this,
+            R.layout.listitem_student, students
+        )
         listview.setOnItemClickListener { parent, view, position, id ->
-            Toast.makeText(this, position.toString(),
-                Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, position.toString(), Toast.LENGTH_SHORT)
+                .show()
+
+            //Intent
+            if (position == 0) {
+                var i = Intent(this, profileActivity::class.java) //อดุลย์
+                startActivity(i)
+            } else if (position == 1) {
+                var i = Intent(this, profileActivity::class.java) //เจมส์
+                startActivity(i)
+            } else if (position == 2) {
+                var i = Intent(this, profileActivity::class.java) //ดรีม
+                startActivity(i)
+            } else if (position == 3) {
+                var i = Intent(this, MaprangActivity::class.java) //มะปราง
+                startActivity(i)
+            }
         }
->>>>>>> 4c711dfdf58c7b6ff41c41fdd93678e9733593e0
     }
 }
