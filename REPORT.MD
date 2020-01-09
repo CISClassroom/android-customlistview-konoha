@@ -37,7 +37,7 @@
 	students.add(Student("นายกัมพล โชติทอง","603410034-5",R.drawable.adun))
         students.add(Student("นายณัฐนนท์ ทาไธสง","603410041-8",R.drawable.james))
         students.add(Student("นางสาวศศิกร กอเสนาะรส","603410063-8",R.drawable.dream))
-        students.add(Student("นางสาวธัญสิริ ผลไสว","603410291-5",R.drawable.maprangpf))
+        students.add(Student("นางสาวธัญสิริ ผลไสว","603410291-5",R.drawable.maprang))
 
 ```
 
@@ -80,7 +80,7 @@ listview.setOnItemClickListener { parent, view, position, id ->
                 var i = Intent(this,profileActivity::class.java) //ดรีม
                 startActivity(i)
             } else if (position == 3){
-                var i = Intent(this,PrangActivity::class.java) //มะปราง
+                var i = Intent(this,MaprangActivity::class.java) //มะปราง
                 startActivity(i)
             }
         }
