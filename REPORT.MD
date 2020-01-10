@@ -30,11 +30,13 @@
 ### ข้อมูล Array
 
 ```xml
+        var student:Student = Student("นายกัมพล โชติทอง", "603410034-5", R.drawable.adun)
+
         var students = mutableListOf<Student>()
-	students.add(Student("นายกัมพล โชติทอง","603410034-5",R.drawable.adun))
-        students.add(Student("นายณัฐนนท์ ทาไธสง","603410041-8",R.drawable.james))
-        students.add(Student("นางสาวศศิกร กอเสนาะรส","603410063-8",R.drawable.dream))
-        students.add(Student("นางสาวธัญสิริ ผลไสว","603410291-5",R.drawable.maprangpf))
+        students.add(student)
+        students.add(Student("นายณัฐนนท์ ทาไธสง", "603410041-8", R.drawable.james))
+        students.add(Student("นางสาวศศิกร กอเสนาะรส", "603410063-8", R.drawable.dream))
+        students.add(Student("นางสาวธัญสิริ ผลไสว", "603410291-5", R.drawable.maprang))
 
 ```
 
@@ -56,31 +58,28 @@
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="2dp" />
 </LinearLayout>
-
 ```
 
 ### setOnItemClickListener และการส่งข้อมูลไปอีก Activity
 
 ```kotlin
-listview.setOnItemClickListener { parent, view, position, id ->
-            Toast.makeText(this, position.toString(), Toast.LENGTH_SHORT)
+Toast.makeText(this, position.toString(), Toast.LENGTH_SHORT)
                 .show()
 
             //Intent
-            if (position == 0){
-                var i = Intent(this,profileActivity::class.java) //อดุลย์
+            if (position == 0) {
+                var i = Intent(this, AdunActivity::class.java) //อดุลย์
                 startActivity(i)
-            } else if (position == 1){
-                var i = Intent(this,profileActivity::class.java) //เจมส์
+            } else if (position == 1) {
+                var i = Intent(this, JamesActivity::class.java) //เจมส์
                 startActivity(i)
-            } else if (position == 2){
-                var i = Intent(this,profileActivity::class.java) //ดรีม
+            } else if (position == 2) {
+                var i = Intent(this, DreamActivity::class.java) //ดรีม
                 startActivity(i)
-            } else if (position == 3){
-                var i = Intent(this,PrangActivity::class.java) //มะปราง
+            } else if (position == 3) {
+                var i = Intent(this, MaprangActivity::class.java) //มะปราง
                 startActivity(i)
             }
-        }
 ```
 
 ### การรับข้อมูลจากอีก Activity
