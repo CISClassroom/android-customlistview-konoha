@@ -15,7 +15,7 @@ class CustomListActivity : AppCompatActivity() {
         setContentView(R.layout.activity_custom_list)
 
         var students = mutableListOf<Student>()
-        students.add(Student("นายกัมพล โชติทอง", "603410034-5", R.drawable.adun)) //มีแล้วบัค -..-
+        //students.add(Student("นายกัมพล โชติทอง", "603410034-5", R.drawable.adun)) //มีแล้วบัค -..-
         students.add(Student("นายณัฐนนท์ ทาไธสง", "603410041-8", R.drawable.james))
         students.add(Student("นางสาวศศิกร กอเสนาะรส", "603410063-8", R.drawable.dream))
         students.add(Student("นางสาวธัญสิริ ผลไสว", "603410291-5", R.drawable.maprang))
