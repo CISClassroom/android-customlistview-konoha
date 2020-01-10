@@ -14,18 +14,20 @@ class CustomListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_custom_list)
 
+        var student:Student = Student("นายกัมพล โชติทอง", "603410034-5", R.drawable.adun)
+
         var students = mutableListOf<Student>()
-        //students.add(Student("นายกัมพล โชติทอง", "603410034-5", R.drawable.adun)) //มีแล้วบัค -..-
+        students.add(student)
         students.add(Student("นายณัฐนนท์ ทาไธสง", "603410041-8", R.drawable.james))
         students.add(Student("นางสาวศศิกร กอเสนาะรส", "603410063-8", R.drawable.dream))
         students.add(Student("นางสาวธัญสิริ ผลไสว", "603410291-5", R.drawable.maprang))
 
-        var listview: ListView = findViewById(R.id.customlistview)
-        listview.adapter = StudentAdapter(
+        var listView: ListView = findViewById(R.id.customlistview)
+        listView.adapter = StudentAdapter(
             this,
             R.layout.listitem_student, students
         )
-        listview.setOnItemClickListener { parent, view, position, id ->
+        listView.setOnItemClickListener { parent, view, position, id ->
             Toast.makeText(this, position.toString(), Toast.LENGTH_SHORT)
                 .show()
 

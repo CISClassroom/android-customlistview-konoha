@@ -10,7 +10,7 @@ class profileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
         //get data from activity
-        //val data = intent.getStringExtra("selectedname")
-        //Toast.makeText(this,data, Toast.LENGTH_SHORT).show()
+        val data = intent.getStringExtra("selectedname")
+        Toast.makeText(this,data, Toast.LENGTH_SHORT).show()
     }
 }

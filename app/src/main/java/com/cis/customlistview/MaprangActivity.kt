@@ -10,7 +10,7 @@ class MaprangActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_maprang)
 
-        button8.setOnClickListener {
+        buttonM.setOnClickListener {
             this.finish()
         }
     }

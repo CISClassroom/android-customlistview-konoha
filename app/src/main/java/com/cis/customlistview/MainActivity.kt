@@ -24,8 +24,10 @@ class MainActivity : AppCompatActivity() {
         val mylistview = findViewById<ListView>(R.id.mylistview) //val is datatype
 
         val arrayAdapter: ArrayAdapter<*> //เอาชื่อคลาสมาเป็นตัวแปร
-        arrayAdapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,student_name)
+        arrayAdapter = ArrayAdapter(this,
+            android.R.layout.simple_list_item_1,student_name)
         mylistview.adapter = arrayAdapter as ListAdapter
+
         mylistview.setOnItemClickListener { parent, view, position, id ->
             Log.i("listview item", position.toString())
             //get text from listview by position
