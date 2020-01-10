@@ -31,13 +31,13 @@ class CustomListActivity : AppCompatActivity() {
 
             //Intent
             if (position == 0) {
-                var i = Intent(this, profileActivity::class.java) //อดุลย์
+                var i = Intent(this, AdunActivity::class.java) //อดุลย์
                 startActivity(i)
             } else if (position == 1) {
-                var i = Intent(this, profileActivity::class.java) //เจมส์
+                var i = Intent(this, JamesActivity::class.java) //เจมส์
                 startActivity(i)
             } else if (position == 2) {
-                var i = Intent(this, profileActivity::class.java) //ดรีม
+                var i = Intent(this, DreamActivity::class.java) //ดรีม
                 startActivity(i)
             } else if (position == 3) {
                 var i = Intent(this, MaprangActivity::class.java) //มะปราง
