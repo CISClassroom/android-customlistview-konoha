@@ -9,7 +9,11 @@ android {
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.cis.customlistview"
+<<<<<<< HEAD
         minSdkVersion 23
+=======
+        minSdkVersion 22
+>>>>>>> 7f2ee25037aec20e8819b54f7110478425c3aebd
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -32,4 +36,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //circleimgview
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+    implementation 'com.akexorcist:RoundCornerProgressBar:1.0.0'
 }
