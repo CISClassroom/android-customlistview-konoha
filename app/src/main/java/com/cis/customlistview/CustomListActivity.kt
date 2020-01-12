@@ -23,6 +23,7 @@ class CustomListActivity : AppCompatActivity() {
         var listview:ListView = findViewById(R.id.customlistview)
         listview.adapter = StudentAdapter(this,
             R.layout.listitem_student,students)
+
         listview.setOnItemClickListener { parent, view, position, id ->
             Toast.makeText(this, position.toString(),
                 Toast.LENGTH_SHORT).show()
